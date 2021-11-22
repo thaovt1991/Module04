@@ -12,7 +12,7 @@ import java.util.TreeMap;
 @Controller
 public class DistionaryController {
     @GetMapping("/result")
-    public String translate(@RequestParam String english, Model model) {
+    public String translate(@RequestParam("english") String english, Model model) {
         Dictionary dictionary = new Dictionary() ;
         Map<String,String> treeTranslate = new TreeMap<>() ;
         treeTranslate = dictionary.getTreeTranslate() ;
