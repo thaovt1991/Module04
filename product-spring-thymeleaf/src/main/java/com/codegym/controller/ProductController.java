@@ -3,6 +3,7 @@ package com.codegym.controller;
 import com.codegym.model.Product;
 import com.codegym.service.IProductService;
 import com.codegym.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/product")
 public class ProductController {
-    private final IProductService productService = new ProductService();
+//    private final IProductService productService = new ProductService();
+    @Autowired
+    private ProductService productService;
 
     @GetMapping("")
     public String show(Model model) {

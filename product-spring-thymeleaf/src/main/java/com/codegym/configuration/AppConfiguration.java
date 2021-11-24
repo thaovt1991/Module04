@@ -1,5 +1,6 @@
 package com.codegym.configuration;
 
+import com.codegym.service.ProductService;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -50,5 +51,9 @@ public class AppConfiguration implements WebMvcConfigurer,  ApplicationContextAw
         viewResolver.setTemplateEngine(templateEngine());
         viewResolver.setCharacterEncoding("UTF-8");
         return viewResolver;
+    }
+    @Bean
+    public ProductService productService() {
+        return new ProductService();
     }
 }

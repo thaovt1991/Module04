@@ -20,7 +20,6 @@ public class CustomerController {
 
     @GetMapping("")
     public String index(Model model) {
-
         List<Customer> customerList = customerService.findAll();
         model.addAttribute("customers", customerList);
         return "/index";

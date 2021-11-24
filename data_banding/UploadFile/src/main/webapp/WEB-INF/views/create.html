@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Add Product</h3>
+<p>
+    <a th:href="@{/product}">
+        Back to product list
+    </a>
+</p>
+<div>
+    <div th:if="${message} != null">
+        <span th:text="${message}" style="color: green"></span>
+    </div>
+</div>
+<div id="form">
+    <form th:action="@{/product/save}" th:object="${productForm}"
+          method="POST" novalidate="novalidate" enctype="multipart/form-data">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input type="text" th:field="*{description}"/>
+        </div>
+        <div>
+            <label>Image</label>
+            <input type="file" th:field="*{image}" onchange='openFile(event)' name="fileUpdate"/>
+            <input type="hidden" value="" id="base64" name="image">
+            <img id='output' height="150px" width="150px" th:src = "${'/image/' +fileName}">
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+<script>
+    function openFile(event) {
+        let input = event.target;
+        let reader = new FileReader();
+        reader.onload = function () {
+            let dataURL = reader.result;
+            let output = document.getElementById('output');
+            output.src = dataURL;
+            document.getElementById("base64").value = dataURL;
+        }
+        reader.readAsDataURL(input.files[0]);
+    };
+</script>
+</html>
