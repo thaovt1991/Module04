@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Add song</h3>
+<p>
+    <a th:href="@{/song}">
+        Back to song list
+    </a>
+</p>
+<!--<div>-->
+<!--    <div th:if="${message} != null">-->
+<!--        <span th:text="${message}" style="color: green"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<div id="form">
+    <form th:action="@{/song/save}" th:object="${songForm}"
+          method="POST" novalidate="novalidate" enctype="multipart/form-data">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name Song</label>
+            <input type="text" th:field="*{nameSong}"/>
+        </div>
+        <div>
+            <label>Singer</label>
+            <input type="text" th:field="*{singer}"/>
+        </div>
+        <div>
+            <label>Category</label>
+           <select th:field="*{category}">
+               <option value="Bolero">Bolero</option>
+               <option value="Nhac Tre">Nhac Tre</option>
+               <option value="Rap">Rap</option>
+               <option value="Nhac nuoc ngoai">Nhac nuoc ngoai</option>
+           </select>
+        </div>
+        <br>
+        <div>
+            <label>Sound</label>
+            <input type="file" th:field="*{sound}" />
+            <audio controls>
+                <source th:src = "${'/image/' +fileName}">
+            </audio>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

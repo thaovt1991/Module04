@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Information settings email</title>
+</head>
+<body>
+<h2>Information settings email</h2>
+<table>
+    <tr>
+        <td>Languages:</td>
+        <td><span th:text="${emailSettings.languages}"></span></td>
+    </tr>
+    <tr>
+        <td>Page Size </td>
+        <td><span th:text="${emailSettings.size}"></span></td>
+    </tr>
+    <tr>
+        <td>Spams filter : </td>
+        <td><span th:if = "${emailSettings.spams_filter}" >Checked</span>
+            <span th:if = "${!emailSettings.spams_filter}" >No checked</span>
+
+        </td>
+    </tr>
+    <tr>
+        <td>Signature:</td>
+        <td><span th:text="${emailSettings.signature}"></span></td>
+    </tr>
+</table>
+</body>
+</html>
