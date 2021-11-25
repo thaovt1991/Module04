@@ -5,59 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6b05a11-6904-4ee9-af9c-beb53b4c479c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/java/com/codegym/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/java/com/codegym/service/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringController/target/email-validate-maven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringController/target/email-validate-maven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringControllerGradle/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringControllerGradle/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringControllerGradle/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringControllerGradle/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringCustomer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCustomer/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../calcalator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../calcalator/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../calcalator/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../calcalator/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../calcalator/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../calcalator/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-manager-thymeleaf/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-manager-thymeleaf/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/UploadMusic/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/UploadMusic/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/UploadMusic/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/UploadMusic/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/mail-sending/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/mail-sending/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-mvc-form/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-mvc-form/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-mvc-form/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-mvc-form/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-user-model/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-user-model/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-user-model/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-user-model/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-spring-thymeleaf/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-spring-thymeleaf/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sandwich/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../sandwich/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sandwich/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../sandwich/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-greeting/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-greeting/build/tmp/war/MANIFEST.MF" afterDir="false" />
@@ -106,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ORM/customer-management" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -220,6 +190,7 @@
       <workItem from="1637552149760" duration="785000" />
       <workItem from="1637571850984" duration="121000" />
       <workItem from="1637639542210" duration="348000" />
+      <workItem from="1637813897639" duration="51000" />
     </task>
     <servers />
   </component>
