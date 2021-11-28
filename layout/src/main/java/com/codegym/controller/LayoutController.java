@@ -12,7 +12,7 @@ public class LayoutController {
     public String show(){
         return "/index" ;
     }
-    @GetMapping("/layo#")
+    @GetMapping("/layout#")
     public String show2(){
         return "/index" ;
     }

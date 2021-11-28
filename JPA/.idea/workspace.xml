@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79920a30-8c9a-4d11-880f-e85022f4dbbd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/customer-manager/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/customer-manager/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-usedSP/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/customer-usedSP/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer-usedSP/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/customer-usedSP/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/build/libs/uploadImage-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/build/libs/uploadImage-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/src/main/webapp/WEB-INF/views/image/cfden_nong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/src/main/webapp/WEB-INF/views/image/cfsua-nong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ORM/uploadImage/src/main/webapp/WEB-INF/views/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ORM/uploadImage/src/main/webapp/WEB-INF/views/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringController/target/email-validate-maven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringController/target/email-validate-maven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringControllerGradle/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringControllerGradle/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringControllerGradle/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringControllerGradle/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringCustomer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringCustomer/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calcalator/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../calcalator/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../calcalator/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../calcalator/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-manager-thymeleaf/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-manager-thymeleaf/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-manager-thymeleaf/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/UploadMusic/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/UploadMusic/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/UploadMusic/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/UploadMusic/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/mail-sending/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/mail-sending/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-mvc-form/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-mvc-form/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-mvc-form/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-mvc-form/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-user-model/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-user-model/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_banding/spring-user-model/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../data_banding/spring-user-model/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-spring-thymeleaf/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../product-spring-thymeleaf/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../product-spring-thymeleaf/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../sandwich/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sandwich/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../sandwich/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-greeting/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-greeting/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-greeting/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-greeting/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-timezone-gradle/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-timezone-gradle/build/tmp/war/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-timezone-gradle/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-timezone-gradle/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../transfers/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../transfers/build/tmp/war/MANIFEST.MF" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="21RyUiD7TZFIxGeJewU7rkXGMMS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79920a30-8c9a-4d11-880f-e85022f4dbbd" name="Changes" comment="" />
+      <created>1637918212533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637918212533</updated>
+      <workItem from="1637918214324" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

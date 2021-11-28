@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head >
+    <th:block th:replace="/layout/head::head" />
+    <title>Dashboard | Simple - Responsive Bootstrap 4 Admin Dashboard</title>
+</head>
+
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+
+    <!-- Topbar Start -->
+    <th:block th:replace="/layout/navbar::navbar" />
+    <!-- end Topbar --> <!-- ========== Left Sidebar Start ========== -->
+    <th:block th:replace="/layout/left-side-menu::left-side-menu" />
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start container-fluid -->
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h4 class="header-title mb-3">Welcome !</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <!--end row -->
+
+                <!-- end row -->
+
+                <!-- end row -->
+
+            </div>
+            <!-- end container-fluid -->
+
+
+
+            <!-- Footer Start -->
+            <th:block th:replace="/layout/footer::footer" />
+            <!-- end Footer -->
+
+        </div>
+        <!-- end content -->
+
+    </div>
+    <!-- END content-page -->
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- Right Sidebar -->
+<th:block th:replace="/layout/right-bar :: right-bar" />
+<!-- /Right-bar -->
+
+
+
+<a href="javascript:void(0);" class="right-bar-toggle demos-show-btn">
+    <i class="mdi mdi-settings-outline mdi-spin"></i> &nbsp;Choose Demos
+</a>
+
+<!-- Vendor js -->
+<th:block th:replace="/layout/script :: script-all" />
+
+</body>
+
+</html>
