@@ -15,14 +15,14 @@ public class WithdrawRepository implements IWithdrawRepository{
 
     @Override
     public List findAll() {
-        String hql ="select w from Withdraw w where w.status = true" ;
+        String hql ="select w from Withdraw w where w.isDelete = false " ;
         TypedQuery<Withdraw> query = entityManager.createQuery(hql,Withdraw.class) ;
         return query.getResultList();
     }
 
     @Override
     public Withdraw findById(Long id) {
-        String hql ="select w from Withdraw w where w.status = true and w.id =:id";
+        String hql ="select w from Withdraw w where w.isDelete = false and w.id =:id";
         TypedQuery<Withdraw> query = entityManager.createQuery(hql,Withdraw.class).setParameter("id",id) ;
         try {
             return query.getSingleResult();
@@ -43,7 +43,7 @@ public class WithdrawRepository implements IWithdrawRepository{
     public void remove(Long id) {
         Withdraw withdraw = findById(id) ;
         if(withdraw!=null){
-            withdraw.setStatus(false);
+            withdraw.setDelete(true);
             entityManager.merge(withdraw) ;
         }
     }

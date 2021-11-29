@@ -30,14 +30,23 @@ public class DepositsController {
     }
     @PostMapping("/deposits")
     private ModelAndView saveDeposits(@ModelAttribute("deposits") Deposits deposits){
-        depositsService.save(deposits);
-        ModelAndView modelAndView = new ModelAndView("/customer/deposits");
         Customer customer = customerService.findById(deposits.getIdOwner());
+        long money_deposits = deposits.getAmount();
+        boolean isMoney = false;
+        if (money_deposits > 1000 && money_deposits <= 1000000000) {
+            isMoney = true;
+        }
+        ModelAndView modelAndView = new ModelAndView("/customer/deposits");
+        if(isMoney){
+        depositsService.save(deposits);
         customer.setBalance(customer.getBalance()+deposits.getAmount());
         customerService.save(customer);
+            modelAndView.addObject("message", "Deposits successfully");
+        }else {
+            modelAndView.addObject("error","Deposits error !");
+        }
         modelAndView.addObject("deposits", new Deposits(deposits.getIdOwner()));
         modelAndView.addObject("customer",customer);
-        modelAndView.addObject("message", "Deposits successfully");
         return modelAndView ;
     }
 }

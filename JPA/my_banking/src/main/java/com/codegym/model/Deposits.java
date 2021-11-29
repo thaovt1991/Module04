@@ -7,11 +7,12 @@ import java.time.LocalDateTime;
 @Table(name = "deposits")
 public class Deposits {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+
     private Long idOwner;
-    private Long amount;
-    private boolean status = true ;
+    private long amount;
+    private boolean isDelete = false ;
     private LocalDateTime datetime = LocalDateTime.now();
 
     public Deposits(){}
@@ -37,11 +38,11 @@ public class Deposits {
         return idOwner;
     }
 
-    public void setIdOwner(Long idOwner) {
+    public void setIdOwner(long idOwner) {
         this.idOwner = idOwner;
     }
 
-    public Long getAmount() {
+    public long getAmount() {
         return amount;
     }
 
@@ -49,12 +50,12 @@ public class Deposits {
         this.amount = amount;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean isDelete() {
+        return isDelete;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setDelete(boolean status) {
+        this.isDelete = status;
     }
 
     public LocalDateTime getDatetime() {

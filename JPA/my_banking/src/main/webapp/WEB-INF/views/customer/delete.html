@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete customer</title>
-    <th:block th:replace="/layout/head_crud::head"></th:block>
+    <th:block th:replace="~{/layout/head_crud::head}"></th:block>
 </head>
 <body>
 <div class="container">
@@ -21,6 +21,9 @@
     </div>
     <form th:action="@{/delete-customer}" th:object="${customer}" method="post">
         <input th:type="hidden" name="id" th:field="*{id}">
+        <input th:type="hidden" name="datetime" th:field="*{datetime}">
+        <input th:type="hidden" name="isDelete" th:field="*{delete}">
+        <input th:type="hidden" name="balance" th:field="*{balance}">
         <div class="row">
             <div class="col-md-6">
                 <label class="form-label">Full name</label>
@@ -54,6 +57,6 @@
 </div>
 
 
-<th:block th:replace="/layout/script::script_all"></th:block>
+<th:block th:replace="~{/layout/script::script_all}"></th:block>
 </body>
 </html>

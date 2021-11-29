@@ -1,6 +1,5 @@
 package com.codegym.repository;
 
-import com.codegym.model.Customer;
 import com.codegym.model.Deposits;
 
 import javax.persistence.EntityManager;
@@ -17,14 +16,14 @@ public class DepositsRepository implements IDepositsRepository{
 
     @Override
     public List<Deposits> findAll() {
-        String sql = "select d from Deposits d where d.status =true" ;
+        String sql = "select d from Deposits d where d.isDelete =false " ;
         TypedQuery<Deposits> query = entityManager.createQuery(sql, Deposits.class);
         return query.getResultList() ;
     }
 
     @Override
     public Deposits findById(Long id) {
-       String sql ="select d from Deposits d where d.status =true and d.id =:id";
+       String sql ="select d from Deposits d where d.isDelete =false and d.id =:id";
       TypedQuery<Deposits> query = entityManager.createQuery(sql,Deposits.class).setParameter("id",id) ;
         try {
             return query.getSingleResult();
@@ -46,7 +45,7 @@ public class DepositsRepository implements IDepositsRepository{
     public void remove(Long id) {
         Deposits deposits = findById(id);
         if (deposits != null) {
-            deposits.setStatus(false);
+            deposits.setDelete(true);
             entityManager.merge(deposits);
         }
     }

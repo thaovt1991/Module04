@@ -22,23 +22,42 @@ public class WithdrawController {
     private ICustomerService customerService;
 
     @GetMapping("/withdraw/{id}")
-    private ModelAndView viewDeposits(@PathVariable Long id){
+    private ModelAndView viewDeposits(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("/customer/withdraw");
         Customer customer = customerService.findById(id);
-        modelAndView.addObject("withdraw",new Withdraw(id));
-        modelAndView.addObject("customer",customer);
-        return modelAndView ;
+        modelAndView.addObject("withdraw", new Withdraw(id));
+        modelAndView.addObject("customer", customer);
+        modelAndView.addObject("success", null);
+        modelAndView.addObject("error", null);
+        return modelAndView;
     }
+
     @PostMapping("/withdraw")
-    private ModelAndView saveDeposits(@ModelAttribute("withdraw") Withdraw withdraw){
-        withdrawService.save(withdraw);
-        ModelAndView modelAndView = new ModelAndView("/customer/withdraw");
+    private ModelAndView saveDeposits(@ModelAttribute("withdraw") Withdraw withdraw) {
         Customer customer = customerService.findById(withdraw.getIdOwner());
-        customer.setBalance(customer.getBalance()-withdraw.getAmount());
-        customerService.save(customer);
+        long money_withdraw = withdraw.getAmount();
+        boolean isMoney = false;
+        if (money_withdraw > 1000) {
+            isMoney = true;
+        }
+        boolean isLimit = false;
+        if (money_withdraw <= customer.getBalance()) {
+            isLimit = true;
+        }
+
+        boolean isTrue = isMoney && isLimit;
+        ModelAndView modelAndView = new ModelAndView("/customer/withdraw");
+        if (isTrue) {
+            withdrawService.save(withdraw);
+            customer.setBalance(customer.getBalance() - withdraw.getAmount());
+            customerService.save(customer);
+            modelAndView.addObject("success", "Withdraw successfully");
+        } else {
+            modelAndView.addObject("error", "Withdraw error !");
+        }
         modelAndView.addObject("withdraw", new Withdraw(withdraw.getIdOwner()));
-        modelAndView.addObject("customer",customer);
-        modelAndView.addObject("message", "Withdraw successfully");
-        return modelAndView ;
+        modelAndView.addObject("customer", customer);
+
+        return modelAndView;
     }
 }

@@ -17,13 +17,13 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public List<Customer> findAll() {
-        TypedQuery<Customer> query = em.createQuery("select c from Customer c where c.status =true ", Customer.class);
+        TypedQuery<Customer> query = em.createQuery("select c from Customer c where c.isDelete =false ", Customer.class);
         return query.getResultList();
     }
 
     @Override
     public Customer findById(Long id) {
-        TypedQuery<Customer> query = em.createQuery("select c from Customer c where  c.id=:id and c.status =true", Customer.class);
+        TypedQuery<Customer> query = em.createQuery("select c from Customer c where  c.id=:id and c.isDelete =false", Customer.class);
         query.setParameter("id", id);
         try {
             return query.getSingleResult();
@@ -34,12 +34,6 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public void save(Customer customer) {
-//        List<Customer> customerList = findAll() ;
-//        if (customerList.equals(customer)) {
-//            em.merge(customer);
-//        } else {
-//            em.persist(customer);
-//        }
         if (customer.getId() != null) {
             em.merge(customer);
         } else {
@@ -51,7 +45,7 @@ public class CustomerRepository implements ICustomerRepository {
     public void remove(Long id) {
         Customer customer = findById(id);
         if (customer != null) {
-            customer.setStatus(false);
+            customer.setDelete(true);
             em.merge(customer);
         }
     }

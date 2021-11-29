@@ -8,24 +8,24 @@ import java.time.LocalDateTime;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+
     private String fullname;
     private String email;
     private String phone;
     private String address;
-    private Long balance;
-    private boolean status = true ;
+    private long balance = 0 ;
+    private boolean isDelete = false ;
     private LocalDateTime datetime = LocalDateTime.now();
 
     public Customer() {}
 
-    public Customer( String fullname, String email, String phone, String address, Long balance) {
+    public Customer( String fullname, String email, String phone, String address) {
         this.fullname = fullname;
         this.email = email;
         this.phone = phone;
         this.address = address;
-        this.balance = balance;
     }
 
 
@@ -61,11 +61,11 @@ public class Customer {
         this.phone = phone;
     }
 
-    public Long getBalance() {
+    public long getBalance() {
         return balance;
     }
 
-    public void setBalance(Long balance) {
+    public void setBalance(long balance) {
         this.balance = balance;
     }
 
@@ -77,12 +77,12 @@ public class Customer {
         this.address = address;
     }
 
-    public boolean isStatus() {
-        return status;
+    public boolean isDelete() {
+        return isDelete;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setDelete(boolean status) {
+        this.isDelete = status;
     }
 
     public LocalDateTime getDatetime() {
