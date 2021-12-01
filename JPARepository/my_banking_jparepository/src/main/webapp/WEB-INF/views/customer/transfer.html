@@ -24,33 +24,33 @@
         <div class="row">
             <div class="col-md-3">
                 <label class="form-label">Sender ID</label>
-                <input type="text" class="form-control" id="id" name="id"
-                       th:field="*{idSender}" readonly>
+                <input type="text" class="form-control"
+                       th:field="${customerSender.getId()}" readonly>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Sender Name</label>
                 <input type="text" class="form-control" id="fullName" name="fullName"
-                       th:value="${customer_sender.getFullname()}" readonly>
+                       th:value="${customerSender.getFullName()}" readonly>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Email</label>
                 <input type="text" class="form-control" id="email" name="email"
-                       th:value="${customer_sender.getEmail()}" readonly>
+                       th:value="${customerSender.getEmail()}" readonly>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Sender Balance (VND)</label>
                 <input type="number" class="form-control" id="balanceSender" name="balanceSender"
-                       th:value="${customer_sender.getBalance()}" readonly>
+                       th:value="${customerSender.getBalance()}" readonly>
             </div>
             <div class="col-md-3">
                 <label class="form-label">Recipient ID</label>
                 <select name="idRecipient" id="idRecipient" class="form-select" aria-label="Default select example"
-                        th:field="*{idRecipient}">
+                        th:field="*{customer}">
                     <option value="0" selected>Select Recipient ID</option>
-                    <th:block th:each="customer: ${customersList}">
-                        <option th:value="${customer.getId()}">
-                            (<span th:text="${customer.getId()}"></span>)<span
-                                th:text="${customer.getFullname()}"></span>
+                    <th:block th:each="c : ${customerListRecipient}">
+                        <option th:value="${customer.id}">
+                            (<span th:text="${customer.id}"></span>)<span
+                                th:text="${customer.fullname}"></span>
                         </option>
                     </th:block>
                 </select>
@@ -67,9 +67,10 @@
             </div>
             <div class="col-md-3">
                 <label class="form-label">Total amount(VND)</label>
-                <input type="number" class="form-control" id="totalAmount" name="totalAmount"
-                       value="0" th:field="*{transaction_amount}" readonly>
+                <input type="number" class="form-control" id="totalAmount" name="feesAmount"
+                       value="0" th:field="*{feesAmount}" readonly>
             </div>
+             <input type="hidden" th:field="*{transactionAmount}" >
             <div class="col-md-12">
                 <br>
                 <button type="submit" id="btnCreateCustomer" class="btn btn-outline-primary">
@@ -99,6 +100,6 @@
         let transferAmount = document.getElementById("transferAmount").value
         let fees = document.getElementById("fees").value
         let totalAmount = transferAmount * fees / 100 ;
-        document.getElementById("totalAmount").value = totalAmount ;
+        document.getElementById("feesAmount").value = totalAmount ;
     }
 </script>

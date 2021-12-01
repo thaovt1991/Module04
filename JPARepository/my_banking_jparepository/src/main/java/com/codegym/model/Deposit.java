@@ -2,7 +2,6 @@ package com.codegym.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table(name = "deposits")
@@ -11,23 +10,30 @@ public class Deposit {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    private Long idOwner;
+    @ManyToOne
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    private Customer customer;
+
     private long amount;
     private boolean isDelete = false ;
-    private LocalDateTime datetime = LocalDateTime.now();
+    private LocalDateTime created_at = LocalDateTime.now();
 
-    @OneToMany(targetEntity = Customer.class)
-    private List<Customer> customers;
+
 
     public Deposit(){}
 
-    public Deposit(Long idOwner) {
-        this.idOwner = idOwner;
+    public Deposit(Long id, Customer customer, long amount) {
+        this.id = id;
+        this.customer = customer;
+        this.amount = amount;
     }
 
-    public Deposit(Long idOwner, Long amount) {
-        this.idOwner = idOwner;
+    public Deposit(Long id, Customer customer, long amount, boolean isDelete, LocalDateTime created_at) {
+        this.id = id;
+        this.customer = customer;
         this.amount = amount;
+        this.isDelete = isDelete;
+        this.created_at = created_at;
     }
 
     public Long getId() {
@@ -38,19 +44,19 @@ public class Deposit {
         this.id = id;
     }
 
-    public Long getIdOwner() {
-        return idOwner;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setIdOwner(long idOwner) {
-        this.idOwner = idOwner;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public long getAmount() {
         return amount;
     }
 
-    public void setAmount(Long amount) {
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 
@@ -58,15 +64,15 @@ public class Deposit {
         return isDelete;
     }
 
-    public void setDelete(boolean status) {
-        this.isDelete = status;
+    public void setDelete(boolean delete) {
+        isDelete = delete;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
+    public void setCreated_at(LocalDateTime datetime) {
+        this.created_at = datetime;
     }
 }

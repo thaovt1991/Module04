@@ -2,7 +2,6 @@ package com.codegym.model;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Table (name="transfers")
@@ -11,31 +10,36 @@ public class Transfer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long idSender ;
-    private Long idRecipient;
+
+    @ManyToOne
+    @JoinColumn(name = "sender_id", referencedColumnName = "id")
+    private Customer sender;
+
+    @ManyToOne
+    @JoinColumn(name = "recipient_id", referencedColumnName = "id")
+    private Customer recipient;
+
     private long transferAmount ;
     private long fees ;
     private long feesAmount;
     private long transactionAmount;
-    private boolean isDelete = false ;
-    private LocalDateTime dateTime = LocalDateTime.now();
+    private boolean isDeleted = false ;
+    private LocalDateTime created_at = LocalDateTime.now();
 
-    @OneToMany(targetEntity = Customer.class)
-    private List<Customer> customers;
 
     public Transfer() {
     }
 
-    public Transfer(Long idSender, Long idRecipient, Long transferAmount) {
-        this.idSender = idSender;
-        this.idRecipient = idRecipient;
+    public Transfer(Long id, Customer sender, Customer recipient, long transferAmount, long fees, long feesAmount, long transactionAmount, boolean isDeleted, LocalDateTime created_at) {
+        this.id = id;
+        this.sender = sender;
+        this.recipient = recipient;
         this.transferAmount = transferAmount;
-        this.fees = 10 ;
-    }
-
-    public Transfer(Long idSender) {
-        this.idSender = idSender;
-        this.fees = 10;
+        this.fees = fees;
+        this.feesAmount = feesAmount;
+        this.transactionAmount = transactionAmount;
+        this.isDeleted = isDeleted;
+        this.created_at = created_at;
     }
 
     public Long getId() {
@@ -46,20 +50,20 @@ public class Transfer {
         this.id = id;
     }
 
-    public Long getIdSender() {
-        return idSender;
+    public Customer getSender() {
+        return sender;
     }
 
-    public void setIdSender(Long idSender) {
-        this.idSender = idSender;
+    public void setSender(Customer sender) {
+        this.sender = sender;
     }
 
-    public Long getIdRecipient() {
-        return idRecipient;
+    public Customer getRecipient() {
+        return recipient;
     }
 
-    public void setIdRecipient(Long idRecipient) {
-        this.idRecipient = idRecipient;
+    public void setRecipient(Customer recipient) {
+        this.recipient = recipient;
     }
 
     public long getTransferAmount() {
@@ -82,8 +86,8 @@ public class Transfer {
         return feesAmount;
     }
 
-    public void setFeesAmount(long transaction_amount) {
-        this.feesAmount = transaction_amount;
+    public void setFeesAmount(long feesAmount) {
+        this.feesAmount = feesAmount;
     }
 
     public long getTransactionAmount() {
@@ -93,19 +97,20 @@ public class Transfer {
     public void setTransactionAmount(long transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
-    public boolean isDelete() {
-        return isDelete;
+
+    public boolean isDeleted() {
+        return isDeleted;
     }
 
-    public void setDelete(boolean delete) {
-        isDelete = delete;
+    public void setDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 }

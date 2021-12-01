@@ -11,24 +11,24 @@ public class Withdraw {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long idOwner;
-    private long amount;
-    private boolean isDelete = false;
-    private LocalDateTime datetime = LocalDateTime.now();
+    @ManyToOne
+    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    private Customer customer;
 
-    @OneToMany(targetEntity = Customer.class)
-    private List<Customer> customers;
+    private long amount;
+    private boolean isDelete = false ;
+    private LocalDateTime created_at = LocalDateTime.now();
+
 
     public Withdraw() {
     }
 
-    public Withdraw(Long idOwner) {
-        this.idOwner = idOwner;
-    }
-
-    public Withdraw(Long idOwner, Long amount) {
-        this.idOwner = idOwner;
+    public Withdraw(Long id, Customer customer, long amount, boolean isDelete, LocalDateTime created_at) {
+        this.id = id;
+        this.customer = customer;
         this.amount = amount;
+        this.isDelete = isDelete;
+        this.created_at = created_at;
     }
 
     public Long getId() {
@@ -39,19 +39,19 @@ public class Withdraw {
         this.id = id;
     }
 
-    public Long getIdOwner() {
-        return idOwner;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setIdOwner(long idOwner) {
-        this.idOwner = idOwner;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public long getAmount() {
         return amount;
     }
 
-    public void setAmount(Long amount) {
+    public void setAmount(long amount) {
         this.amount = amount;
     }
 
@@ -59,15 +59,15 @@ public class Withdraw {
         return isDelete;
     }
 
-    public void setDelete(boolean status) {
-        this.isDelete = status;
+    public void setDelete(boolean delete) {
+        isDelete = delete;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
+    public void setCreated_at(LocalDateTime created_at) {
+        this.created_at = created_at;
     }
 }

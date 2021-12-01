@@ -14,7 +14,6 @@ public interface ICustomerRepository extends JpaRepository<Customer, Long> {
 
         Iterable<Customer> findAllByProvince(Province province);
 
-
         Page<Customer> findAllByFirstNameContaining(String firstname, Pageable pageable);
 
         Page<Customer> findAllById(Long id, Pageable pageable);

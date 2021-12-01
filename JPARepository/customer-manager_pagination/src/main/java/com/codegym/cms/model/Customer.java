@@ -1,6 +1,9 @@
 package com.codegym.cms.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
+
+
 
 @Entity
 @Table(name = "customers")
@@ -9,7 +12,13 @@ public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
+
+    @NotEmpty(message = "Không để trống tên")
+    @Size(min=2 ,max=45 , message = "Độ dài của tên từ 2 đến 45 kí tự")
     private String firstName;
+
+    @Size(min=2 ,max=45, message = "Độ dài của họ từ 2 đến 45 kí tự")
+    @NotEmpty(message = "Không để trống họ")
     private String lastName;
 
     @ManyToOne
@@ -18,7 +27,7 @@ public class Customer {
 
     public Customer() {}
 
-    public Customer(String firstName, String lastName) {
+    public Customer(@Size(min=2 ,max=45) String firstName,@Size(min=2 ,max=45) String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }

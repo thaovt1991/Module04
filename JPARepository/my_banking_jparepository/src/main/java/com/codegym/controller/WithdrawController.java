@@ -2,8 +2,8 @@ package com.codegym.controller;
 
 import com.codegym.model.Customer;
 import com.codegym.model.Withdraw;
-import com.codegym.service.ICustomerService;
-import com.codegym.service.IWithdrawService;
+import com.codegym.service.customer.ICustomerService;
+import com.codegym.service.withdraw.IWithdrawService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.Optional;
 
 @Controller
 public class WithdrawController {
@@ -22,21 +24,27 @@ public class WithdrawController {
 
     @GetMapping("/withdraw/{id}")
     private ModelAndView viewDeposits(@PathVariable Long id) {
-        ModelAndView modelAndView = new ModelAndView("/customer/withdraw");
-        Customer customer = customerService.findById(id);
-        modelAndView.addObject("withdraw", new Withdraw(id));
-        modelAndView.addObject("customer", customer);
-        modelAndView.addObject("success", null);
-        modelAndView.addObject("error", null);
-        return modelAndView;
+
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isPresent()) {
+            ModelAndView modelAndView = new ModelAndView("/customer/withdraw");
+            modelAndView.addObject("withdraw", new Withdraw());
+            modelAndView.addObject("customer", customer.get());
+            modelAndView.addObject("success", null);
+            modelAndView.addObject("error", null);
+            return modelAndView;
+        } else {
+            ModelAndView modelAndView = new ModelAndView("/error.404");
+            return modelAndView;
+        }
     }
 
     @PostMapping("/withdraw")
     private ModelAndView saveDeposits(@ModelAttribute("withdraw") Withdraw withdraw) {
-        Customer customer = customerService.findById(withdraw.getIdOwner());
+        Customer customer = customerService.findById(withdraw.getCustomer().getId()).get();
         long money_withdraw = withdraw.getAmount();
         boolean isMoney = false;
-        if (money_withdraw > 1000) {
+        if (money_withdraw >= 1000) {
             isMoney = true;
         }
         boolean isLimit = false;
@@ -54,7 +62,7 @@ public class WithdrawController {
         } else {
             modelAndView.addObject("error", "Withdraw error !");
         }
-        modelAndView.addObject("withdraw", new Withdraw(withdraw.getIdOwner()));
+        modelAndView.addObject("withdraw", new Withdraw());
         modelAndView.addObject("customer", customer);
 
         return modelAndView;

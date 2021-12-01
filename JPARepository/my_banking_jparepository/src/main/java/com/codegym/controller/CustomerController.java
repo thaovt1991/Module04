@@ -1,31 +1,30 @@
 package com.codegym.controller;
 
 import com.codegym.model.Customer;
-import com.codegym.service.ICustomerService;
+import com.codegym.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Optional;
+
 @Controller
-//@RequestMapping("/customers")
+
 public class CustomerController {
+
     @Autowired
     private ICustomerService customerService;
 
-    @GetMapping("/customers")
-    public ModelAndView showListCustomer() {
-        ModelAndView modelAndView = new ModelAndView("/customer/list");
-        modelAndView.addObject("customers", customerService.findAll());
-        return modelAndView;
-    }
 
     @GetMapping("/create-customer")
     public ModelAndView showCreateForm() {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
         modelAndView.addObject("customer", new Customer());
-        modelAndView.addObject("message", null);
         return modelAndView;
     }
 
@@ -38,14 +37,70 @@ public class CustomerController {
         return modelAndView;
     }
 
+//    @GetMapping("/customers")
+//    public ModelAndView listCustomers() {
+//        Iterable<Customer> customers = customerService.findAll();
+//        ModelAndView modelAndView = new ModelAndView("/customer/list");
+//        modelAndView.addObject("customers", customers);
+//        return modelAndView;
+//    }
+    @GetMapping("/customers")
+    public ModelAndView listCustomers(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+        Page<Customer> customers = customerService.findAll(pageable);
+        ModelAndView modelAndView = new ModelAndView("/customer/list");
+        modelAndView.addObject("customers", customers);
+        return modelAndView;
+    }
+
+//    @GetMapping("/customers")
+//    public ModelAndView listCustomers(@RequestParam("search") Optional<String> search,
+//                                      @RequestParam("search_id") Optional<String> search_id,
+//                                      @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable
+//    ) {
+//
+//        Page<Customer> customers;
+//
+//        long num;
+////
+//        boolean isNum = false;
+//        try {
+//            num = Long.parseLong(search_id.get());
+//            isNum = true;
+//        } catch (Exception e) {
+//            isNum = false;
+//        }
+//        if (search_id.isPresent()) {
+//            if (isNum) {
+//                customers= customerService.findAllById(Long.parseLong(search_id.get()), pageable);
+////                customers_bylastname = customerService.findAllByLastNameContaining(search_id.get(), pageable) ;
+////                for(Customer c : customers_bylastname){
+////                    if(!customers.equals(c)){
+////                       customers.toList().add(c) ;
+////                    }
+////                }
+//            } else {
+//                customers = customerService.findAllByLastNameContaining(search_id.get(), pageable) ;
+//            }
+//        } else {
+//            customers = customerService.findAll(pageable);
+//        }
+//
+////        if (search.isPresent()) {
+////            customers = customers.findAllByFirstNameContaining(search.get(), pageable);
+////        } else {
+////            customers = customerService.findAll(pageable);
+////        }
+//        ModelAndView modelAndView = new ModelAndView("/customer/list");
+//        modelAndView.addObject("customers", customers);
+//        return modelAndView;
+//    }
+
     @GetMapping("/edit-customer/{id}")
     public ModelAndView showEditForm(@PathVariable Long id) {
-        Customer customer = customerService.findById(id);
-
-        if (customer != null) {
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isPresent()) {
             ModelAndView modelAndView = new ModelAndView("/customer/edit");
-            modelAndView.addObject("message", null);
-            modelAndView.addObject("customer", customer);
+            modelAndView.addObject("customer", customer.get());
             return modelAndView;
         } else {
             ModelAndView modelAndView = new ModelAndView("/error.404");
@@ -64,11 +119,12 @@ public class CustomerController {
 
     @GetMapping("/delete-customer/{id}")
     public ModelAndView showDeleteForm(@PathVariable Long id) {
-        Customer customer = customerService.findById(id);
-        if (customer != null) {
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isPresent()) {
             ModelAndView modelAndView = new ModelAndView("/customer/delete");
-            modelAndView.addObject("customer", customer);
+            modelAndView.addObject("customer", customer.get());
             return modelAndView;
+
         } else {
             ModelAndView modelAndView = new ModelAndView("/error.404");
             return modelAndView;
@@ -80,5 +136,4 @@ public class CustomerController {
         customerService.remove(customer.getId());
         return "redirect:customers";
     }
-
 }

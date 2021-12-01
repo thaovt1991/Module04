@@ -6,12 +6,13 @@ import com.codegym.cms.repository.ICustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
+    @Service
 public class CustomerService implements ICustomerService {
     @Autowired
     private ICustomerRepository customerRepository;
@@ -43,7 +44,6 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public Page<Customer> findAll(Pageable pageable) {
-//        pageable = PageRequest.of(1, 10);
         return customerRepository.findAll(pageable);
     }
 

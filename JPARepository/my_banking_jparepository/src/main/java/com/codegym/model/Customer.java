@@ -12,29 +12,31 @@ public class Customer {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    private String fullname;
+    private String fullName;
     private String email;
     private String phone;
     private String address;
     private long balance = 0 ;
     private boolean isDelete = false ;
-    private LocalDateTime datetime = LocalDateTime.now();
+    private LocalDateTime created_at = LocalDateTime.now();
 
-    @OneToMany(targetEntity = Transfer.class)
-    private List<Transfer> transfers;
-
-    @OneToMany(targetEntity = Deposit.class)
+    @OneToMany(targetEntity = Deposit.class, mappedBy = "customer")
     private List<Deposit> deposits;
 
-    @OneToMany(targetEntity = Withdraw.class)
+    @OneToMany(targetEntity = Withdraw.class, mappedBy = "customer")
     private List<Withdraw> withdraws;
 
+    @OneToMany(targetEntity = Transfer.class, mappedBy = "sender")
+    private List<Transfer> senders;
+
+    @OneToMany(targetEntity = Transfer.class, mappedBy = "recipient")
+    private List<Transfer> recipients;
 
 
     public Customer() {}
 
-    public Customer( String fullname, String email, String phone, String address) {
-        this.fullname = fullname;
+    public Customer(String fullName, String email, String phone, String address) {
+        this.fullName = fullName;
         this.email = email;
         this.phone = phone;
         this.address = address;
@@ -49,12 +51,12 @@ public class Customer {
         this.id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullname) {
+        this.fullName = fullname;
     }
 
     public String getEmail() {
@@ -97,12 +99,12 @@ public class Customer {
         this.isDelete = status;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public LocalDateTime getCreated_at() {
+        return created_at;
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
+    public void setCreated_at(LocalDateTime datetime) {
+        this.created_at = datetime;
     }
 }
 

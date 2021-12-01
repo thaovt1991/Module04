@@ -11,6 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -38,9 +40,15 @@ public class CustomerController {
     }
 
     @PostMapping("/create-customer")
-    public ModelAndView saveCustomer(@ModelAttribute("customer") Customer customer) {
-        customerService.save(customer);
+    public ModelAndView saveCustomer(@Validated  @ModelAttribute("customer") Customer customer, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
+        if (bindingResult.hasFieldErrors()) {
+            modelAndView.addObject("message", "Create error !" );
+            return  modelAndView ;
+        }
+
+        customerService.save(customer);
+
         modelAndView.addObject("customer", new Customer());
         modelAndView.addObject("message", "New customer created successfully");
         return modelAndView;

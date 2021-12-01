@@ -30,7 +30,7 @@ public class TransferService implements ITransferService{
     @Override
     public void remove(Long id) {
       Transfer transfer = findById(id).get() ;
-      transfer.setDelete(true);
+      transfer.setDeleted(true);
       transferRepository.save(transfer) ;
     }
 }

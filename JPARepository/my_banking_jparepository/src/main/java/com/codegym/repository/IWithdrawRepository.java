@@ -1,10 +1,7 @@
 package com.codegym.repository;
 
-import com.codegym.model.Customer;
 import com.codegym.model.Withdraw;
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public interface IWithdrawRepository extends PagingAndSortingRepository<Withdraw,Long> {
+public interface IWithdrawRepository extends JpaRepository<Withdraw, Long>{
 }

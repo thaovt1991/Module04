@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Service
-public class WithdrawService implements IWithdrawService{
+public class WithdrawService implements IWithdrawService {
 
     @Autowired
     private IWithdrawRepository withdrawRepository ;
@@ -23,13 +23,13 @@ public class WithdrawService implements IWithdrawService{
 
     @Override
     public void save(Withdraw withdraw) {
-        withdrawRepository.save(withdraw);
+      withdrawRepository.save(withdraw) ;
     }
 
     @Override
     public void remove(Long id) {
-        Withdraw withdraw = findById(id).get() ;
-        withdraw.setDelete(true);
-        withdrawRepository.save(withdraw);
+      Withdraw withdraw = withdrawRepository.findById(id).get() ;
+      withdraw.setDelete(true);
+      withdrawRepository.save(withdraw);
     }
 }
