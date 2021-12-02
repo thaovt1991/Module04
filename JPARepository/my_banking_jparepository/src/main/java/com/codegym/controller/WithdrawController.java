@@ -23,7 +23,7 @@ public class WithdrawController {
     private ICustomerService customerService;
 
     @GetMapping("/withdraw/{id}")
-    private ModelAndView viewDeposits(@PathVariable Long id) {
+    private ModelAndView viewWithdraw(@PathVariable Long id) {
 
         Optional<Customer> customer = customerService.findById(id);
         if (customer.isPresent()) {
@@ -39,9 +39,9 @@ public class WithdrawController {
         }
     }
 
-    @PostMapping("/withdraw")
-    private ModelAndView saveDeposits(@ModelAttribute("withdraw") Withdraw withdraw) {
-        Customer customer = customerService.findById(withdraw.getCustomer().getId()).get();
+    @PostMapping("/withdraw/{customerId}")
+    private ModelAndView saveWithdraw(@PathVariable Long customerId,@ModelAttribute("withdraw") Withdraw withdraw) {
+        Customer customer = customerService.findById(customerId).get();
         long money_withdraw = withdraw.getAmount();
         boolean isMoney = false;
         if (money_withdraw >= 1000) {
