@@ -19,23 +19,27 @@
         </div>
     </div>
 
-    <form th:action="@{/create-customer}" th:object="${customer}" method="post">
+    <form id="#frmCreateCustomer" th:action="@{/create-customer}" th:object="${customer}" method="post">
 
         <div class="row">
             <div class="col-md-6">
                 <label class="form-label">Full name</label>
+                <!--                <input type="text" th:if="${#fields.hasErrors('fullName') == false}" th:class="form-control is-valid"-->
+                <!--                       th:field="*{fullName}" required>-->
+                <!--                <input type="text" th:if="${#fields.hasErrors('fullName') == true}" th:class="form-control is-invalid"-->
+                <!--                       th:field="*{fullName}" required>-->
                 <input type="text" class="form-control"
-                       th:field="*{fullName}">
+                       th:field="*{fullName}" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Email</label>
                 <input type="text" class="form-control"
-                       th:field="*{email}">
+                       th:field="*{email}" is-valid required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Phone</label>
                 <input type="text" class="form-control"
-                       th:field="*{phone}">
+                       th:field="*{phone}" required>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Address</label>
@@ -53,17 +57,33 @@
             </div>
         </div>
     </form>
-    <div class="row">
-        <footer>
+    <div class="row footer">
+        <div id="message-alert">
             <th:block th:if="${message}">
-                <div class="bg-success p-2 text-white"><span th:text="${message}"></span></div>
+                <div class="bg-success p-2 text-white "><span th:text="${message}"></span></div>
             </th:block>
-            <th:block th:if="${error}">
-                <div class="bg-danger bg-gradient p-2 text-white"><span th:text="${error}"></span></div>
+            <th:block th:if="${error} ">
+                <div class="bg-danger bg-gradient p-2 text-white" th:text="${error}">
+                    <!--                    <p th:each="error : ${errorList}" th:text="${'*' + error.toString()}" ></p>-->
+                </div>
             </th:block>
-        </footer>
+        </div>
     </div>
 </div>
+<!--<div class="footer">-->
+<!--    <div id="message-alert">-->
+<!--        <th:block th:if="${message}">-->
+<!--            <div class="bg-success p-2 text-white "><span th:text="${message}"></span></div>-->
+<!--        </th:block>-->
+<!--        <th:block th:if="${error} ">-->
+<!--            <div class="bg-danger bg-gradient p-2 text-white alert-danger hide">-->
+<!--            </div>-->
+<!--        </th:block>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
 
 <th:block th:replace="~{/layout/script::script_all}"></th:block>
 </body>

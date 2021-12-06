@@ -8,9 +8,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -29,15 +33,29 @@ public class CustomerController {
     }
 
     @PostMapping("/create-customer")
-    public ModelAndView saveCustomer(@ModelAttribute("customer") Customer customer) {
-        customerService.save(customer);
+    public ModelAndView saveCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/customer/create");
-        modelAndView.addObject("customer", new Customer());
-        modelAndView.addObject("message", "New customer created successfully");
-        return modelAndView;
+        if (bindingResult.hasFieldErrors()) {
+            List<ObjectError> errorList = bindingResult.getAllErrors();
+            String error = "New customer created error " + "\n";
+            for (int i = 0; i < errorList.size(); i++) {
+                error += "*" + errorList.get(i).getDefaultMessage() + "\n";
+            }
+            modelAndView.addObject("error", error);
+            return modelAndView;
+        }
+        try {
+            customerService.save(customer);
+            modelAndView.addObject("customer", new Customer());
+            modelAndView.addObject("message", "New customer created successfully");
+            return modelAndView;
+        } catch (Exception e) {
+            modelAndView.addObject("error", "Registered email");
+            return modelAndView;
+        }
     }
 
-//    @GetMapping("/customers")
+    //    @GetMapping("/customers")
 //    public ModelAndView listCustomers() {
 //        Iterable<Customer> customers = customerService.findAll();
 //        ModelAndView modelAndView = new ModelAndView("/customer/list");
@@ -46,7 +64,7 @@ public class CustomerController {
 //    }
     @GetMapping("/customers")
     public ModelAndView listCustomers(@PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
-        Page<Customer> customers = customerService.findAll(pageable);
+        Page<Customer> customers = customerService.findAllNoDelete(pageable);
         ModelAndView modelAndView = new ModelAndView("/customer/list");
         modelAndView.addObject("customers", customers);
         return modelAndView;
@@ -109,12 +127,26 @@ public class CustomerController {
     }
 
     @PostMapping("/edit-customer")
-    public ModelAndView updateCustomer(@ModelAttribute("customer") Customer customer) {
-        customerService.save(customer);
+    public ModelAndView updateCustomer(@Validated @ModelAttribute("customer") Customer customer, BindingResult bindingResult) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/customer/edit");
-        modelAndView.addObject("customer", customer);
-        modelAndView.addObject("message", "Customer updated successfully");
-        return modelAndView;
+        if (bindingResult.hasFieldErrors()) {
+            List<ObjectError> errorList = bindingResult.getAllErrors();
+            String error = "Edit customer error " + "\n";
+            for (int i = 0; i < errorList.size(); i++) {
+                error += "*" + errorList.get(i).getDefaultMessage() + "\n";
+            }
+            modelAndView.addObject("error", error);
+            return modelAndView;
+        }
+        try {
+            customerService.save(customer);
+            modelAndView.addObject("customer", customer);
+            modelAndView.addObject("message", "Customer updated successfully");
+            return modelAndView;
+        } catch (Exception e) {
+            modelAndView.addObject("error", "Registered email");
+            return modelAndView;
+        }
     }
 
     @GetMapping("/delete-customer/{id}")
@@ -132,7 +164,7 @@ public class CustomerController {
     }
 
     @PostMapping("/delete-customer")
-    public String deleteCustomer(@ModelAttribute("customer") Customer customer) {
+    public String deleteCustomer(@ModelAttribute("customer") Customer customer)  {
         customerService.remove(customer.getId());
         return "redirect:customers";
     }

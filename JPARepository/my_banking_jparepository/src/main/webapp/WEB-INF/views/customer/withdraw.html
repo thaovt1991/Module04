@@ -58,7 +58,11 @@
                 <div class="bg-success p-2 text-white"><span th:text="${success}"></span></div>
             </th:block>
             <th:block th:if="${error}">
-                <div class="bg-danger bg-gradient p-2 text-white"><span th:text="${error}"></span></div>
+                <div class="bg-danger bg-gradient p-2 text-white">
+                    <h4 th:text="${error}"></h4>
+                    <p th:if="${error_money}" th:text="${'*' + error_money}" ></p>
+                    <p th:if="${error_limit}" th:text="${'*' + error_limit}" ></p>
+                </div>
             </th:block>
         </footer>
     </div>

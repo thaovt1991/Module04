@@ -1,5 +1,6 @@
 package com.codegym.service.customer;
 
+
 import com.codegym.model.Customer;
 import com.codegym.repository.ICustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,15 @@ public class CustomerService implements ICustomerService {
         customer.setDelete(true);
         save(customer);
     }
+
     @Override
     public Page<Customer> findAll(Pageable pageable) {
         return customerRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Customer> findAllNoDelete(Pageable pageable) {
+        return customerRepository.findAllNoDelete(pageable);
     }
 
     @Override

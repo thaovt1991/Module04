@@ -43,35 +43,25 @@
             </div>
             <div class="col-md-3">
                 <label class="form-label">Recipient ID</label>
-
-<!--                <select name="idRecipient" id="idRecipient" class="form-select" aria-label="Default select example">-->
-<!--                    <option value="0" selected>Select Recipient ID</option>-->
-<!--                    <th:block th:each="item : ${recipients}">-->
-<!--                        <option th:value="${item.id}">-->
-<!--                            (<span th:text="${item.id}"></span>)<span th:text="${item.fullName}"></span>-->
-<!--                        </option>-->
-<!--                    </th:block>-->
-<!--                </select>-->
-
                 <select name="recipient" id="recipient" class="form-select">
-                    <option value="0" selected>Select Recipient ID</option>-->
+                    <option th:value="${sender.id}" selected>Select Recipient ID</option>
                     <option th:each="item : ${recipients}" th:value="${item.id}" th:text="'(' + ${item.id} + ') ' + ${item.fullName}"></option>
                 </select>
 
             </div>
             <div class="col-md-3">
                 <label class="form-label">Transfer Amount(VND)</label>
-                <input type="number" class="form-control"
-                       th:field="*{transferAmount}" onkeydown="onChange()">
+                <input type="number" class="form-control" id="transferAmount" name="transferAmount"
+                       th:field="*{transferAmount}" onkeyup="onChange()">
             </div>
             <div class="col-md-3">
                 <label class="form-label">Fees(%)</label>
-                <input type="text" class="form-control"
+                <input type="text" class="form-control" name = "fees" id="fees"
                        th:field="*{fees}" readonly>
             </div>
             <div class="col-md-3">
-                <label class="form-label">Total amount(VND)</label>
-                <input type="number" class="form-control" id="totalAmount" name="feesAmount"
+                <label class="form-label">Fees amount(VND)</label>
+                <input type="number" class="form-control" id="feesAmount" name="feesAmount"
                        value="0" th:field="*{feesAmount}" readonly>
             </div>
              <input type="hidden" th:field="*{transactionAmount}" >
@@ -88,10 +78,15 @@
         <footer>
         <th:block th:if="${success}">
             <div class="bg-success p-2 text-white"><span th:text="${success}"></span></div>
-        </th:block>
-        <th:block th:if="${error}">
-            <div class="bg-danger bg-gradient p-2 text-white"><span th:text="${error}"></span></div>
-        </th:block>
+        </th:block >
+            <th:block th:if="${error}">
+                <div class="bg-danger bg-gradient p-2 text-white">
+                    <h4 th:text="${error}"></h4>
+                    <p th:if="${error_money}" th:text="${'*' + error_money}" ></p>
+                    <p th:if="${error_limit}" th:text="${'*' + error_limit}" ></p>
+                    <p th:if="${error_recipient}" th:text="${'*' + error_recipient}" ></p>
+                </div>
+            </th:block>
         </footer>
     </div>
 </div>
@@ -103,7 +98,6 @@
     function onChange(){
         let transferAmount = document.getElementById("transferAmount").value
         let fees = document.getElementById("fees").value
-        let totalAmount = transferAmount * fees / 100 ;
-        document.getElementById("feesAmount").value = totalAmount ;
+        document.getElementById("feesAmount").value = transferAmount * fees / 100
     }
 </script>

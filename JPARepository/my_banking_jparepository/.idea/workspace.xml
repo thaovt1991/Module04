@@ -5,6 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21b961b6-0a8c-4bff-a48d-5c33871c4ca5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/hit-counter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/hit-counter/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/save-user.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/save-user/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/shopping-cart/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SessionAndCookie/shopping-cart/.idea/shopping-cart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/BootstrapJqueryCustomerManagement/.idea/BootstrapJqueryCustomerManagement.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/BootstrapJqueryCustomerManagement/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/BootstrapJqueryCustomerManagement/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/BootstrapJqueryCustomerManagement/src/main/webapp/WEB-INF/views/customer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/configuration/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/configuration/AppInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/service/IGeneralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/service/customer/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../baitap_layout_jq/customer-management/src/main/java/com/codegym/service/customer/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AOP/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../AOP/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JPA/customer-manager/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../JPA/customer-manager/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JPA/customer-usedSP/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../JPA/customer-usedSP/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../JPA/customer-usedSP/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../JPA/customer-usedSP/gradlew.bat" afterDir="false" />
@@ -16,9 +57,6 @@
       <change beforePath="$PROJECT_DIR$/../../SpringControllerGradle/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringControllerGradle/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../SpringCustomer/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../SpringCustomer/customer-management" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../TimezoneMaven/target/TimezoneMaven-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Validation/form-regerter/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Validation/user-validate/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../Validation/user-validate/build/tmp/war/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Validation/user-validate/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../Validation/user-validate/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../calcalator/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../calcalator/build/tmp/war/MANIFEST.MF" afterDir="false" />
@@ -62,6 +100,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -69,11 +108,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codegym/controller/WithdrawController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/codegym/model/Customer.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/deposit.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/create.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/transfer.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/transfers_list.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/deposit.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/list.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/codegym/formatter/CustomerFormatter.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/assets/customer-validate/customer-validate.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/codegym/controller/CustomerController.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="JpbToolWindowState">
@@ -111,7 +154,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../bai_tap_anh_minh/bai_tap_anh_minh/my_banking_jparepository" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -125,6 +168,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/customers" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Gradle : org.example : my_banking_jparepository-1.0-SNAPSHOT.war">
@@ -229,6 +273,15 @@
       <workItem from="1638347959310" duration="2426000" />
       <workItem from="1638410039146" duration="3671000" />
       <workItem from="1638437069815" duration="8790000" />
+      <workItem from="1638500922227" duration="4595000" />
+      <workItem from="1638521751780" duration="1965000" />
+      <workItem from="1638526049398" duration="2142000" />
+      <workItem from="1638609339409" duration="6872000" />
+      <workItem from="1638616239229" duration="13594000" />
+      <workItem from="1638680243865" duration="2971000" />
+      <workItem from="1638774672826" duration="1977000" />
+      <workItem from="1638782173265" duration="4210000" />
+      <workItem from="1638797440888" duration="722000" />
     </task>
     <servers />
   </component>
