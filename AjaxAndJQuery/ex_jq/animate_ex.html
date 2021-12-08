@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("button").click(function () {
+            //     var div = $("div");
+            //     div.animate({
+            //         left: '100px'
+            //     }, "slow");
+            //     div.animate({
+            //         fontSize: '100px' ,
+            //         width:'500px' ,
+            //         heigth: '200px'
+            //     }, "slow");
+            //     div.animate({
+            //         left: '200px'
+            //     }, "slow");
+            //     div.animate({
+            //         bottom: '200px'
+            //     }, "slow");
+                
+            // });
+
+            $("#bt-submit").click(function(){
+                let fN = $("#firtsName").val()
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <button>Start Animation</button>
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember
+        to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <div style="background:#98bf21;height:100px;width:200px;position:absolute;">C0721K1</div> -->
+
+    <form action="">
+        <table>
+            <tr>
+            <td>
+                First Name
+            </td>
+            <td>
+                <input type="text" name="firtsName" id ="firtsName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Name
+            </td>
+            <td>
+                <input type="text" name="lastName" id="lastName">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="Create" id="bt-submit">
+            </td> 
+        </tr>
+                      
+        </table>
+    </form>
+    <div></div>
+</body>
+
+</html>

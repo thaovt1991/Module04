@@ -60,6 +60,7 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.save(customer), HttpStatus.OK);
     }
 
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Customer> deleteCustomer(@PathVariable Long id) {
         Optional<Customer> customerOptional = customerService.findById(id);
