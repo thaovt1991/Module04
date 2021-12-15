@@ -24,7 +24,7 @@ public class Deposit {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
 
     private LocalDateTime created_at;
@@ -45,8 +45,4 @@ public class Deposit {
         this.transaction_amount = transaction_amount;
     }
 
-    public Deposit(Customer customer, long amount) {
-        this.customer = customer;
-        this.transaction_amount = transaction_amount;
-    }
 }

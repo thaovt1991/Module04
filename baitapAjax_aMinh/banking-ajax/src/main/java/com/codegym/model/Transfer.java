@@ -26,11 +26,11 @@ public class Transfer {
     private Long create_by ;
 
     @ManyToOne
-    @JoinColumn(name = "sender_id", referencedColumnName = "id")
+    @JoinColumn(name = "sender_id")
     private Customer sender;
 
     @ManyToOne
-    @JoinColumn(name = "recipient_id", referencedColumnName = "id")
+    @JoinColumn(name = "recipient_id")
     private Customer recipient;
 
     @Digits(integer= 12,fraction= 0)

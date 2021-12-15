@@ -1,7 +1,8 @@
 package com.codegym.configuration;
 
-import com.codegym.formatter.CustomerFormatter;
+//import com.codegym.formatter.CustomerFormatter;
 import com.codegym.service.customer.CustomerService;
+import com.codegym.service.customer.ICustomerService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
@@ -117,14 +118,16 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         return properties;
     }
 
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addFormatter(new CustomerFormatter(applicationContext.getBean(CustomerService.class)));
-    }
+//    @Override
+//    public void addFormatters(FormatterRegistry registry) {
+//        registry.addFormatter(new CustomerFormatter(applicationContext.getBean(CustomerService.class)));
+//    }
 
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry){
         registry.addResourceHandler("/assets/**").addResourceLocations("/assets/") ;
         registry.addResourceHandler("/image/**").addResourceLocations("/image/") ;}
+
+
 }

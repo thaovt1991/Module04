@@ -4,6 +4,8 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.security.Principal;
@@ -28,4 +30,15 @@ public class UserController {
         System.out.println(context.getAuthentication().getName());
         return new ModelAndView("/admin");
     }
+    @GetMapping("/login")
+    public  ModelAndView login(){
+        ModelAndView modelAndView = new ModelAndView("/login") ;
+                return modelAndView;
+    }
+
+//    @PostMapping("/login")
+//    public  ModelAndView check(){
+//        ModelAndView modelAndView = new ModelAndView("/login") ;
+//        return modelAndView;
+//    }
 }

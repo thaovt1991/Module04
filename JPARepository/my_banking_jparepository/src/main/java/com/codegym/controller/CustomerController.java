@@ -50,7 +50,7 @@ public class CustomerController {
             modelAndView.addObject("message", "New customer created successfully");
             return modelAndView;
         } catch (Exception e) {
-            modelAndView.addObject("error", "Registered email");
+            modelAndView.addObject("error", "Registered email ");
             return modelAndView;
         }
     }
