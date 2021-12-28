@@ -54,21 +54,21 @@ public class CustomerAPI {
     }
 
 
-    @PostMapping
-    public ResponseEntity<Customer> createCustomer(@Validated @RequestBody Customer customer, BindingResult bindingResult) {
-        if (bindingResult.hasErrors())
-            return appUtils.mapErrorToResponse(bindingResult);
-
-        customerDTO.setBalance(BigDecimal.valueOf(0));
-
-        try {
-            return new ResponseEntity<>(customerService.save(customerDTO.toCustomer()), HttpStatus.CREATED);
-            //        return new BaseResponse<Customer>().getValidResponse(201, "Successfully Created Customer", customerService.save(customerDTO.toCustomer()));
-        } catch (DataIntegrityViolationException e) {
-            throw new EmailExistsException("Email already exists");
-        }
-        return new ResponseEntity<>(customerService.save(customer), HttpStatus.OK);
-    }
+//    @PostMapping
+//    public ResponseEntity<Customer> createCustomer(@Validated @RequestBody Customer customer, BindingResult bindingResult) {
+//        if (bindingResult.hasErrors())
+//            return appUtils.mapErrorToResponse(bindingResult);
+//
+//        customerDTO.setBalance(BigDecimal.valueOf(0));
+//
+//        try {
+//            return new ResponseEntity<>(customerService.save(customerDTO.toCustomer()), HttpStatus.CREATED);
+//            //        return new BaseResponse<Customer>().getValidResponse(201, "Successfully Created Customer", customerService.save(customerDTO.toCustomer()));
+//        } catch (DataIntegrityViolationException e) {
+//            throw new EmailExistsException("Email already exists");
+//        }
+//        return new ResponseEntity<>(customerService.save(customer), HttpStatus.OK);
+//    }
 
     @PutMapping()
     public ResponseEntity<Customer> updateCustomerByFull(@RequestBody Customer customer) {

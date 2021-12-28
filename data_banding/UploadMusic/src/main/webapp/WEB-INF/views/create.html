@@ -39,7 +39,7 @@
             <label>Sound</label>
             <input type="file" th:field="*{sound}" />
             <audio controls>
-                <source th:src = "${'/image/' +fileName}">
+                <source th:src = "${'/audio/' +fileName}">
             </audio>
         </div>
         <input type="submit" value="Save"/>
